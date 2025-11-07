@@ -43,6 +43,7 @@ public class Main {
 		    	break;
 		    case SAIR:
 		    	System.out.println("Saindo");
+		    	break;
 		    default:
 		    	System.out.println("Opção inválida.");
 		    }
@@ -56,7 +57,13 @@ public class Main {
 		private static void falar(RoBeta robo, Scanner sc) {
 			System.out.println("Qual a ordem da palavra?");
 			System.out.println("Falando...");
-			System.out.println(robo.falar(sc.nextInt()));
+			try {
+				int indice = sc.nextInt();
+				System.out.println(robo.falar(indice));
+			} catch(InputMismatchException e) {
+				System.out.println("Erro: digite apenas números");
+				sc.nextLine();
+			}
 		}
 		
 		private static void falarAleatorio(RoBeta robo) {
