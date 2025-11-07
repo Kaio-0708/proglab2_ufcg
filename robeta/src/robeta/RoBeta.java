@@ -10,7 +10,7 @@ public class RoBeta {
 	public RoBeta(int bateria, String [] palavras) {
 		if(palavras == null) {
 			throw new NullPointerException();
-		}
+		} 
 		this.bateria = bateria;
 		this.palavras = palavras;
 	}
@@ -28,7 +28,7 @@ public class RoBeta {
 	public String falar(int i) {
 		if(i < 0 || i >= palavras.length) {
 			return "Palavras não existe";
-		} if(consomeEnergia()){
+		}if(consomeEnergia()){
 			return palavras[i];
 		} else {
 			return "Estou sem bateria";
