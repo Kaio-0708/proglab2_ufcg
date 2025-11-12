@@ -3,6 +3,7 @@ package br.edu.ufcg.computacao.p2lp2.coisa;
 import java.util.*;
 
 public class Disciplina {
+	
 	private String nomeDisciplina;
 	
 	private int horas;

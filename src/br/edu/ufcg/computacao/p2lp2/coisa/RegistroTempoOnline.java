@@ -1,8 +1,11 @@
 package br.edu.ufcg.computacao.p2lp2.coisa;
 
 public class RegistroTempoOnline {
+	
 	private int tempoOnline;
+	
 	private int tempoOnlineEsperado;
+	
 	private String nomeDisciplina;
 	
 	public RegistroTempoOnline(String nomeDisciplina) {

@@ -8,14 +8,10 @@ package br.edu.ufcg.computacao.p2lp2.coisa;
 
 public class Aluno {
 
-
-    /** Nome do aluno. */
     private String nome;
 
-    /** Ano de nascimento do aluno. */
     private int anoNascimento;
 
-    /** Coeficiente de Rendimento Acadêmico (CRA) do aluno. */
     private double cra;
 
     /**

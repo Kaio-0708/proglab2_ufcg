@@ -1,7 +1,9 @@
 package br.edu.ufcg.computacao.p2lp2.coisa;
 
 public class Descanso {
+	
 	private int horasDescanso;
+	
 	private int numeroSemanas;
 	
 	public Descanso() {
