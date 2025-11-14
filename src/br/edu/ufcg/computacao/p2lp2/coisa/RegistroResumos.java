@@ -1,5 +1,7 @@
 package br.edu.ufcg.computacao.p2lp2.coisa;
 
+import java.util.*;
+
 public class RegistroResumos {
 	
 	private int numeroDeResumos;
@@ -41,7 +43,7 @@ public class RegistroResumos {
 			}
 		}
 		
-		return "- " + conta() + " resumo(s) cadastrados(s) \n" + " - " + saida;
+		return "- " + conta() + " resumo(s) cadastrados(s) \n" + "- " + saida;
 	}
 	
 	public int conta() {
@@ -59,4 +61,22 @@ public class RegistroResumos {
 		}
 		    return false;
 	}
-}
+	
+	public String [] busca(String chaveDeBusca) {
+		List<String> encontrados = new ArrayList<>();
+        
+		String chavePadronizar = chaveDeBusca.toLowerCase();
+		
+		for(int i = 0; i < conta(); i++) {
+			String conteudoPadronizar = resumos[i].getConteudo().toLowerCase();
+			if(conteudoPadronizar.contains(chavePadronizar)) {
+				encontrados.add(resumos[i].getName());
+			}
+		}
+		
+		Collections.sort(encontrados);
+		
+		return encontrados.toArray(new String[0]);
+	}   
+	
+	}
