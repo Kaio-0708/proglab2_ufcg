@@ -3,7 +3,7 @@ package filmnow;
 /**
  * Sistema que mantém os seus filmes prediletos. Podem existir 100 filmes. 
  * 
- * @author eliane
+ * @author Kaio Vitor Santos Queiroz
  *
  */
 public class FilmNow {

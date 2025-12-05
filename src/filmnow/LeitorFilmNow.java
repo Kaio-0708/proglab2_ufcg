@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * Lógica para ler de arquivos csv os dados necessários e povoar o sistema de filmes. 
  * 
- * @author eliane
+ * @author Kaio Vitor Santos Queiroz
  *
  */
 public class LeitorFilmNow {
