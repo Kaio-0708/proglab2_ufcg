@@ -104,7 +104,7 @@ public class MainFilmNow {
 	private static void detalharFilme(FilmNow fn, Scanner scanner) {
 		System.out.print("\nQual filme> ");
 		int posicao = scanner.nextInt();
-		String filme = fn.getFilme(posicao);
+		Filme filme = fn.getFilme(posicao);
 		DetalharFilme df = new DetalharFilme(filme, posicao);
 		System.out.println(df.toString());
 	}

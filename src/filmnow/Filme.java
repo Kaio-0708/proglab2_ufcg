@@ -12,6 +12,7 @@ public class Filme {
 	private String nome;
 	private int ano;
 	private String[] locais;
+	private boolean HotList;
 	
 	public Filme(String nome, int ano, String local) {
 		if(nome == null || nome.trim().equals("")){
@@ -30,6 +31,7 @@ public class Filme {
 		this.ano = ano;
 		this.locais = new String[5];
 		this.locais[0] = local;
+		this.HotList =  false;
 	}
 	
 	public String getNome() {
@@ -42,6 +44,14 @@ public class Filme {
 	
 	public String[] getLocais() {
 		return this.locais;
+	}
+	
+	public boolean isHotList() {
+		return this.HotList;
+	}
+	
+	public void setHotList(boolean valor) {
+		this.HotList = valor;
 	}
 	
 	@Override
