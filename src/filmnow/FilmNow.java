@@ -60,7 +60,7 @@ public class FilmNow {
 		return "FILME ADICIONADO";
 	}
 	
-	public boolean removeHot(int posicao) {
+	public boolean removerHot(int posicao) {
 		
 		if (posicao < 1 || posicao > 10) {
 			return false;

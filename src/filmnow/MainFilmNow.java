@@ -45,9 +45,17 @@ public class MainFilmNow {
 	private static String menu(Scanner scanner) {
 		System.out.println(
 				"\n---\nMENU\n" + 
-						"(A)Adicionar filme\n" + 
+						"(A)Adicionar filme\n" +
+						"(F)Remover Filme\n" +
 						"(M)Mostrar todos\n" + 
-						"(D)Detalhar filme\n" + 
+						"(N)Mostrar Todos Pelo Nome\n" +
+						"(G)Mostrar Todos Pelo Ano\n" +
+						"(D)Detalhar filme\n" +
+						"(E)Exibir HotList\n" +
+						"(H)Atribuir Hot\n" +
+						"(R)Remover Hot\n" +
+						"(L)Adicionarlocal\n" +
+						"(O)Remover Local\n" +
 						"(S)air\n" + 
 						"\n" + 
 						"Opção> ");
@@ -69,8 +77,32 @@ public class MainFilmNow {
 		case "M":
 			mostrarFilmes(fn);
 			break;
+		case "N":
+			mostrarFilmesPeloNome(fn,scanner);
+			break;
+		case "G":
+			mostrarFilmesPeloAno(fn,scanner);
+			break;
 		case "D":
 			detalharFilme(fn, scanner);
+			break;
+		case "E":
+			exibirHotList(fn);
+			break;
+		case "H":
+			atribuirHot(fn, scanner);
+			break;
+		case "R":
+			removerHot(fn,scanner);
+			break;
+		case "F":
+			removerFilme(fn,scanner);
+			break;
+		case "L":
+			adicionarLocal(fn,scanner);
+			break;
+		case "O":
+			removerLocal(fn,scanner);
 			break;
 		case "S":
 			sai();
@@ -81,20 +113,65 @@ public class MainFilmNow {
 	}
 
 	/**
+	 * Cadastra um filme no sistema. 
+	 * 
+	 * @param fn O sistema FilmNow a ser manipulado.
+	 * @param scanner Scanner para pedir informações do contato.
+	 */
+	private static void adicionaFilme(FilmNow fn, Scanner scanner) {
+		System.out.print("\nPosição no sistema> ");
+		int posicao = scanner.nextInt();
+		scanner.nextLine();
+		System.out.print("\nNome> ");
+		String nome = scanner.nextLine(); 
+		System.out.print("\nAno> ");
+		String ano = scanner.next();
+		scanner.nextLine();
+		System.out.print("\nLocal> ");
+		String local = scanner.nextLine();
+		System.out.println(fn.cadastraFilme(posicao, nome, ano, local));
+	}
+	
+	/**
 	 * Imprime lista de filmes.
 	 * 
 	 * @param fn O sistema FilmNow a ser manipulado.
 	 */
 	private static void mostrarFilmes(FilmNow fn) {
 
-		String[] filmes = fn.getFilmes();
+		Filme[] filmes = fn.getFilmes();
 		for (int i = 0; i < filmes.length; i++) {
 			if (filmes[i] != null) {
 				System.out.println(formataFilme(i, filmes[i]));
 			}
 		}
 	}
-
+	
+	/**
+	 * Formata um filme para impressão. 
+	 * 
+	 * @param posicao A posição do filme (que é exibida)/
+	 * @param filme O filme a ser impresso.
+	 * @return A String formatada.
+	 */
+	private static String formataFilme(int posicao, Filme filme) {
+		return posicao + " - " + filme;
+	}
+    
+	private static void mostrarFilmesPeloNome(FilmNow fn, Scanner scanner) {
+		System.out.println("\nQual o nome do filme?");
+		scanner.nextLine();
+		String nome = scanner.nextLine();
+		System.out.println(fn.mostrarTodosPeloNome(nome));
+	}
+	
+	private static void mostrarFilmesPeloAno(FilmNow fn, Scanner scanner) {
+		System.out.println("\nQual o ano do filme?");
+		int ano = scanner.nextInt();
+		scanner.nextLine();
+		System.out.println(fn.mostrarTodosPeloAno(ano));
+	}
+	
 	/**
 	 * Imprime os detalhes de um dos filmes. 
 	 * 
@@ -108,36 +185,63 @@ public class MainFilmNow {
 		DetalharFilme df = new DetalharFilme(filme, posicao);
 		System.out.println(df.toString());
 	}
-
-	/**
-	 * Formata um filme para impressão. 
-	 * 
-	 * @param posicao A posição do filme (que é exibida)/
-	 * @param filme O filme a ser impresso.
-	 * @return A String formatada.
-	 */
-	private static String formataFilme(int posicao, String filme) {
-		return posicao + " - " + filme;
+    
+	private static void exibirHotList(FilmNow fn) {
+		System.out.println(fn.exibirHotList());
 	}
-
-	/**
-	 * Cadastra um filme no sistema. 
-	 * 
-	 * @param fn O sistema FilmNow a ser manipulado.
-	 * @param scanner Scanner para pedir informações do contato.
-	 */
-	private static void adicionaFilme(FilmNow fn, Scanner scanner) {
-		System.out.print("\nPosição no sistema> ");
-		int posicao = scanner.nextInt();
-		System.out.print("\nNome> ");
-		String nome = scanner.next();
-		System.out.print("\nAno> ");
-		String ano = scanner.next();
-		System.out.print("\nLocal> ");
-		String local = scanner.next();
-		fn.cadastraFilme(posicao, nome, Integer.parseInt(ano), local);
+	
+	private static void atribuirHot(FilmNow fn, Scanner scanner) {
+		System.out.println("Filme> ");
+		int posicaoFilme = scanner.nextInt();
+		System.out.println("posicao> ");
+		int posicaoHot = scanner.nextInt();
+		Filme filme = fn.getFilme(posicaoFilme);
+		System.out.println(fn.atribuirHot(filme, posicaoHot));
 	}
-
+	
+	private static void removerHot(FilmNow fn,Scanner scanner) {
+		System.out.println("Posicao> ");
+		int posicao = scanner.nextInt(); 
+		fn.removerHot(posicao);
+	}
+	
+	private static void removerFilme(FilmNow fn, Scanner scanner) {
+		System.out.println("Posicao> ");
+		int posicao = scanner.nextInt(); 
+		fn.removerFilme(posicao);
+	}
+	
+	private static void adicionarLocal(FilmNow fn, Scanner scanner) {
+		System.out.println("Local>");
+		scanner.nextLine();
+		String local = scanner.nextLine();
+		System.out.println("Filme(s) a receber esse local separados por vírgula>");
+		String []posicoes = scanner.nextLine().split(",");
+		
+		for (String posicao:posicoes) {
+			int pos = Integer.parseInt(posicao);
+			if (pos > 100 || pos < 1 || fn.getFilme(pos) == null) {
+				System.out.println("POSIÇÃO " + pos + " INVÁLIDA");
+			} else {
+				Filme filme = fn.getFilme(pos);
+				filme.adicionarLocal(local);
+			}
+		}
+	}
+	
+	private static void removerLocal(FilmNow fn, Scanner scanner) {
+		System.out.println("Posição do filme a ter o local removido>");
+		int pos = scanner.nextInt();
+		scanner.nextLine();
+		System.out.println("Local>");
+		String local = scanner.nextLine();
+		if (pos > 100 || pos < 1 || fn.getFilme(pos) == null) {
+			System.out.println("POSIÇÃO INVÁLIDA");
+		} else {
+			fn.getFilme(pos).removerLocal(local);
+		}
+	}
+	
 	/**
 	 * Sai da aplicação.
 	 */

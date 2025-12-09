@@ -71,6 +71,42 @@ public class Filme {
 		return ano == other.ano && Objects.equals(nome, other.nome);
 	}
 	
+	public int quantidadeDeLocais() {
+		int contador = 0;
+		for (int i = 0; i < this.locais.length; i ++) {
+			if (this.locais[i] != null) {
+				contador ++;
+			}
+		} 
+		return contador;
+	}
+	
+	public boolean adicionarLocal(String local) {
+		if (quantidadeDeLocais() == 5) {
+			return false;
+		}
+		for (int i = 0; i < this.locais.length; i++) {
+			if (this.locais[i] != null && this.locais[i].equals(local)) {
+				return false;
+			}
+		}
+		this.locais[quantidadeDeLocais()] = local;
+		return true;
+	}
+	
+	public boolean removerLocal(String local) {
+		if (quantidadeDeLocais() == 1) {
+			return false;
+		}
+		for (int i =0; i < this.locais.length; i ++) {
+			if (local.equals(this.locais[i])) {
+				this.locais[i] = null;
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	@Override
 	public String toString() {
 		return this.getNome();
