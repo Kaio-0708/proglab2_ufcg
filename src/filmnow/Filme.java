@@ -31,7 +31,7 @@ public class Filme {
 			throw new IllegalArgumentException("Local não é válido.");
 		}
 		
-		if(ano <=0 ) {
+		if(ano < 0 ) {
 			throw new IllegalArgumentException("Ano não é válido.");
 		}
 		

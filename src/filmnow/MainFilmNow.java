@@ -79,7 +79,7 @@ public class MainFilmNow {
 	private static void comando(String opcao, FilmNow fn, Scanner scanner) {
 		switch (opcao) {
 		case "A":
-			adicionaFilme(fn, scanner);
+			adicionarFilme(fn, scanner);
 			break;
 		case "M":
 			mostrarFilmes(fn);
@@ -125,7 +125,7 @@ public class MainFilmNow {
 	 * @param fn O sistema FilmNow a ser manipulado.
 	 * @param scanner Scanner para pedir informações do contato.
 	 */
-	private static void adicionaFilme(FilmNow fn, Scanner scanner) {
+	private static void adicionarFilme(FilmNow fn, Scanner scanner) {
 		System.out.print("\nPosição no sistema> ");
 		int posicao = scanner.nextInt();
 		scanner.nextLine();
@@ -136,7 +136,7 @@ public class MainFilmNow {
 		scanner.nextLine();
 		System.out.print("\nLocal> ");
 		String local = scanner.nextLine();
-		System.out.println(fn.cadastraFilme(posicao, nome, ano, local));
+		System.out.println(fn.cadastrarFilme(posicao, nome, ano, local));
 	}
 	
 	/**

@@ -59,7 +59,7 @@ public class LeitorFilmNow {
 		String ano = campos[COLUNA_ANO].trim();
 		String local = campos[COLUNA_LOCAL].trim();
 
-		fn.cadastraFilme(posicao, nome, ano, local);
+		fn.cadastrarFilme(posicao, nome, ano, local);
 	}
 
 }

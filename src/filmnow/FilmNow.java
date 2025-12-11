@@ -148,7 +148,7 @@ public class FilmNow {
 		for (int i = 0; i < this.filmes.length; i ++) {
 			if (this.filmes[i] != null) {
 			    if (this.filmes[i].getAno() == ano) {
-				    saida += (i + 1) + " - " + this.filmes[i].getAno() + "\n";
+				    saida += (i + 1) + " - " + this.filmes[i].getNome() + "\n";
 				    }
 			    }
 		}
@@ -188,20 +188,23 @@ public class FilmNow {
 	 * @param ano Ano de lançamento do filme.
 	 * @param local Local onde o filme pode ser assitido.
 	 */
-	public String cadastraFilme(int posicao, String nome, String ano, String local) {
+	public String cadastrarFilme(int posicao, String nome, String ano, String local) {
 		
-		if ("".equals(ano.trim())) {
-			ano = "0";
-		}
-		Filme filme = new Filme(nome,Integer.parseInt(ano),local);
-		if (posicao < 1 || posicao > 100) {
-			return "POSIÇÃO INVÁLIDA";
-		}
+		if (nome == null || nome.trim().isEmpty() ||
+		        local == null || local.trim().isEmpty()) {
+		        return "FILME INVALIDO";
+		    }
+
+		    if (ano.trim().isEmpty()) {
+		        ano = "0";
+		    }
+
+		    if (posicao < 1 || posicao > 100) {
+		        return "POSIÇÃO INVÁLIDA";
+		    }
 		
-		if ("".equals(local.trim()) || "".equals(nome.trim())) {
-			return "FILME INVÁLIDO";
-		}
-				
+		Filme filme = new Filme(nome, Integer.parseInt(ano), local);    
+	
 		for (int i = 0; i < this.filmes.length; i ++) {
 			Filme f = this.filmes[i];
 			if (f != null && f.equals(filme)) {
