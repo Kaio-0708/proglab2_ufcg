@@ -10,7 +10,14 @@ import java.util.Scanner;
  * @author Kaio Vitor Santos Queiroz
  */
 public class MainFilmNow {
-
+    
+	/**
+     * Método principal da aplicação. Inicializa o sistema FilmNow,
+     * carrega filmes iniciais (se o arquivo existir) e inicia o loop
+     * de interação por menu textual.
+     *
+     * @param args argumentos da linha de execução (não utilizados)
+     */
 	public static void main(String[] args) {
 		FilmNow fn = new FilmNow();
 
@@ -158,6 +165,12 @@ public class MainFilmNow {
 		return (posicao + 1) + " - " + filme;
 	}
     
+	/**
+	 * Solicita um nome e exibe todos os filmes que possuem esse nome.
+	 *
+	 * @param fn o sistema FilmNow
+	 * @param scanner scanner para entrada do nome
+	 */
 	private static void mostrarFilmesPeloNome(FilmNow fn, Scanner scanner) {
 		System.out.println("\nQual o nome do filme?");
 		scanner.nextLine();
@@ -165,6 +178,12 @@ public class MainFilmNow {
 		System.out.println(fn.mostrarTodosPeloNome(nome));
 	}
 	
+	/**
+	 * Solicita um ano e exibe todos os filmes cadastrados com esse ano.
+	 *
+	 * @param fn o sistema FilmNow
+	 * @param scanner scanner para entrada do ano
+	 */
 	private static void mostrarFilmesPeloAno(FilmNow fn, Scanner scanner) {
 		System.out.println("\nQual o ano do filme?");
 		int ano = scanner.nextInt();
@@ -186,10 +205,21 @@ public class MainFilmNow {
 		System.out.println(df.toString());
 	}
     
+	/**
+	 * Exibe a HotList atual.
+	 *
+	 * @param fn o sistema FilmNow
+	 */
 	private static void exibirHotList(FilmNow fn) {
 		System.out.println(fn.exibirHotList());
 	}
 	
+	/**
+	 * Atribui um filme a uma posição da HotList.
+	 *
+	 * @param fn o sistema FilmNow
+	 * @param scanner scanner para entrada das posições
+	 */
 	private static void atribuirHot(FilmNow fn, Scanner scanner) {
 		System.out.println("Filme> ");
 		int posicaoFilme = scanner.nextInt();
@@ -199,18 +229,36 @@ public class MainFilmNow {
 		System.out.println(fn.atribuirHot(filme, posicaoHot));
 	}
 	
+	/**
+	 * Remove o filme presente em uma determinada posição da HotList.
+	 *
+	 * @param fn o sistema FilmNow
+	 * @param scanner scanner para entrada da posição
+	 */
 	private static void removerHot(FilmNow fn,Scanner scanner) {
 		System.out.println("Posicao> ");
 		int posicao = scanner.nextInt(); 
 		fn.removerHot(posicao);
 	}
 	
+	/**
+	 * Remove um filme do sistema.
+	 *
+	 * @param fn o sistema FilmNow
+	 * @param scanner scanner para entrada da posição
+	 */
 	private static void removerFilme(FilmNow fn, Scanner scanner) {
 		System.out.println("Posicao> ");
 		int posicao = scanner.nextInt(); 
 		fn.removerFilme(posicao);
 	}
 	
+	/**
+	 * Adiciona um novo local de exibição a um ou vários filmes.
+	 *
+	 * @param fn o sistema FilmNow
+	 * @param scanner scanner utilizado para entrada dos dados
+	 */
 	private static void adicionarLocal(FilmNow fn, Scanner scanner) {
 		System.out.println("Local>");
 		scanner.nextLine();
@@ -229,6 +277,13 @@ public class MainFilmNow {
 		}
 	}
 	
+
+	/**
+	 * Remove um local de exibição de um filme específico.
+	 *
+	 * @param fn o sistema FilmNow
+	 * @param scanner scanner utilizado para entrada das informações
+	 */
 	private static void removerLocal(FilmNow fn, Scanner scanner) {
 		System.out.println("Posição do filme a ter o local removido>");
 		int pos = scanner.nextInt();

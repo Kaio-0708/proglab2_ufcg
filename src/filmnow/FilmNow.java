@@ -1,8 +1,9 @@
 package filmnow;
 
 /**
- * Sistema que mantém os seus filmes prediletos. Podem existir 100 filmes. 
- * 
+ * Sistema que mantém os seus filmes prediletos. Podem existir 100 filmes, além de uma HotList com até 10 destaques.
+ * O FilmNow possibilita cadastrar filmes, exibi-los por nome ou ano, 
+ * adicioná-los ou removê-los da HotList e remover filmes cadastrados.
  * @author Kaio Vitor Santos Queiroz
  *
  */
@@ -14,7 +15,8 @@ public class FilmNow {
 	private Filme[] hotList;
 
 	/**
-	 * Cria o FilmNow.
+	 * Constrói um novo sistema FilmNow com capacidade para
+	 * 100 filmes e uma HotList com 10 posições.
 	 */
 	public FilmNow() {
 		this.filmes = new Filme[TAMANHO];
@@ -22,8 +24,9 @@ public class FilmNow {
 	}
 	
 	/**
-	 * Acessa a lista de filmes mantida.
-	 * @return O array de filmes.
+	 * Retorna uma cópia da lista completa de filmes cadastrados.
+	 *
+	 * @return um array contendo todos os filmes cadastrados (pode haver posições nulas)
 	 */
 	public Filme[] getFilmes() {
 		return this.filmes.clone();
@@ -38,6 +41,19 @@ public class FilmNow {
 		return filmes[posicao -1];
 	}
     
+	/**
+	 * Adiciona um filme à HotList em uma posição específica.
+	 * 
+	 * Regras aplicadas:
+	 *  Não permite posições fora do intervalo 1–10.
+	 *  Não permite adicionar filmes nulos.
+	 *  Não permite adicionar filmes já presentes na HotList.
+	 *  Caso já exista um filme na posição, ele será removido da HotList.
+	 *
+	 * @param filme o filme a ser adicionado
+	 * @param posicao a posição desejada na HotList (1 a 10)
+	 * @return mensagem indicando o resultado da operação
+	 */
 	public String atribuirHot(Filme filme, int posicao) {
 		
 		if (posicao < 1 || posicao > 10) {
@@ -60,6 +76,13 @@ public class FilmNow {
 		return "FILME ADICIONADO";
 	}
 	
+	/**
+	 * Remove um filme da HotList.
+	 *
+	 * @param posicao posição desejada (1 a 10)
+	 * @return {@code true} se o filme for removido; {@code false} caso a posição
+	 *         seja inválida ou esteja vazia
+	 */
 	public boolean removerHot(int posicao) {
 		
 		if (posicao < 1 || posicao > 10) {
@@ -75,6 +98,11 @@ public class FilmNow {
 		return true;
 	}
 	
+	/**
+	 * Exibe todos os filmes presentes na HotList, ordenados por posição.
+	 *
+	 * @return uma string contendo os filmes e suas posições na HotList
+	 */
 	public String exibirHotList() {
 		String saida = "";
 		int contador = 1;
@@ -91,6 +119,12 @@ public class FilmNow {
 		return saida;
 	}
 	
+	/**
+	 * Exibe todos os filmes cujo nome corresponda ao nome informado.
+	 *
+	 * @param nome o nome do filme a ser buscado
+	 * @return string com todas as ocorrências encontradas e suas posições
+	 */
 	public String mostrarTodosPeloNome(String nome) {
 		String saida = "";
 		for (int i = 0; i < this.filmes.length; i ++) {
@@ -103,6 +137,12 @@ public class FilmNow {
 		return saida;
 	}
 	
+	/**
+	 * Exibe todos os filmes cujo ano corresponda ao ano informado.
+	 *
+	 * @param ano ano de lançamento buscado
+	 * @return string com todas as ocorrências encontradas e suas posições
+	 */
 	public String mostrarTodosPeloAno(int ano) {
 		String saida = "";
 		for (int i = 0; i < this.filmes.length; i ++) {
@@ -115,6 +155,14 @@ public class FilmNow {
 		return saida;
 	}
 	
+	/**
+	 * Remove um filme do sistema. Caso o filme removido esteja na HotList,
+	 * ele também será removido de lá.
+	 *
+	 * @param posicao a posição do filme a ser removido (1 a 100)
+	 * @return {@code true} se o filme for removido; {@code false} caso a posição
+	 *         seja inválida ou esteja vazia
+	 */
 	public boolean removerFilme(int posicao) {
 		
 		if (posicao > 100 || posicao < 1) {
