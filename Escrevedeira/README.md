@@ -44,7 +44,7 @@ Antes de executar o projeto, é necessário ter instalado:
 
 ---
 
-## Passo 1 — Clonar o Repositório
+### Passo 1 — Clonar o Repositório
 
 Abra o terminal e execute:
 
@@ -52,7 +52,7 @@ Abra o terminal e execute:
 git clone https://github.com/Kaio-0708/proglab2_ufcg.git
 ```
 
-## Passo 2 — Importar o Projeto no Eclipse
+### Passo 2 — Importar o Projeto no Eclipse
 Abra o Eclipse
 
 No menu superior, clique em File → Import
@@ -68,7 +68,7 @@ Certifique-se de que o projeto foi detectado
 
 Clique em Finish
 
-## Passo 3 — Executar os Testes Automatizados
+### Passo 3 — Executar os Testes Automatizados
 
 ### teste/escrevedeira
 
