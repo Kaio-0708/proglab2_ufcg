@@ -40,7 +40,7 @@ Antes de executar o projeto, é necessário ter instalado:
 
  **Java JDK** (versão 11 ou superior)  
  **Eclipse IDE**  
- **JUnit** configurado no projeto (geralmente já incluso nos projetos de laboratório)
+ **JUnit** configurado no projeto (geralmente já incluso nos projetos de laboratório a versão 5)
 
 ---
 
