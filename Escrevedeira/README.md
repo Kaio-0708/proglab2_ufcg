@@ -55,25 +55,26 @@ git clone https://github.com/Kaio-0708/proglab2_ufcg.git
 ### Passo 2 — Importar o Projeto no Eclipse
 Abra o Eclipse
 
-No menu superior, clique em File → Import
+- No menu superior, clique em File → Import
 
-Selecione General → Existing Projects into Workspace
+- Selecione General → Existing Projects into Workspace
 
-Clique em Next
+- Clique em Next
 
-Em Select root directory, escolha a pasta:
+- Em Select root directory, escolha a pasta:
 
 proglab2_ufcg/Escrevedeira
-Certifique-se de que o projeto foi detectado
 
-Clique em Finish
+-Certifique-se de que o projeto foi detectado
+
+- Clique em Finish
 
 ### Passo 3 — Executar os Testes Automatizados
 
 ### teste/escrevedeira
 
-2. Clique com o botão direito sobre a classe de teste
-3. Selecione **Run As → JUnit Test**
+- Clique com o botão direito sobre a classe de teste
+- Selecione **Run As → JUnit Test**
 
 Os testes automatizados validam se as funcionalidades implementadas estão de acordo com o comportamento esperado pelo enunciado do laboratório.
 
