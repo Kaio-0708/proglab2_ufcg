@@ -65,7 +65,7 @@ Abra o Eclipse
 
 proglab2_ufcg/Escrevedeira
 
--Certifique-se de que o projeto foi detectado
+- Certifique-se de que o projeto foi detectado
 
 - Clique em Finish
 
