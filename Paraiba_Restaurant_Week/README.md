@@ -29,92 +29,77 @@ teste/PRW
 
 ## Descrição das Classes
 
-### Clientes
+###  Clientes
+
 Responsável por armazenar informações do cliente.
 
-Atributos:
+**Atributos:**
+- `nome`
+- `email`
+- `pratoPreferido`
 
-nome
+**Funcionalidades:**
+- Criar cliente com nome e email  
+- Definir prato preferido após votação  
+- Retornar dados formatados do cliente  
 
-email
+---
 
-pratoPreferido
+###  Restaurante
 
-Funcionalidades:
-
-Criar cliente com nome e email
-
-Definir prato preferido após votação
-
-Retornar dados formatados do cliente
-
-### Restaurante
 Gerencia dados do restaurante e interação com clientes.
 
-Atributos:
+**Atributos:**
+- `nome`
+- `pratoEscolhido`
+- `valorMenu` (fixo em R$ 89,90)
+- Lista de clientes visitantes
+- Quantidade de votos
 
-nome
+**Funcionalidades:**
+- Registrar visita de clientes (sem duplicidade)  
+- Registrar voto apenas de clientes que visitaram  
+- Listar clientes visitantes  
+- Contabilizar votos do prato  
 
-pratoEscolhido
+---
 
-valorMenu (fixo em R$ 89,90)
+###  Sistema_PRW
 
-Lista de clientes visitantes
-
-Quantidade de votos
-
-Funcionalidades:
-
-Registrar visita de clientes (sem duplicidade)
-
-Registrar voto apenas de clientes que visitaram
-
-Listar clientes visitantes
-
-Contabilizar votos do prato
-
-### Sistema_PRW
 Classe central do sistema, responsável por orquestrar as operações.
 
-Funcionalidades:
+**Funcionalidades:**
+- Adicionar clientes  
+- Adicionar restaurantes  
+- Registrar visita de cliente ao restaurante  
+- Permitir votação de prato preferido  
+- Listar clientes de um restaurante  
+- Retornar o prato mais votado  
+- Lançar exceções quando cliente ou restaurante não existem  
 
-Adicionar clientes
+---
 
-Adicionar restaurantes
+##  Sistema_PRWTest
 
-Registrar visita de cliente ao restaurante
+Classe de testes unitários utilizando **JUnit 5**.
 
-Permitir votação de prato preferido
+**Testes implementados:**
+- Registrar voto quando o cliente visitou o restaurante  
 
-Listar clientes de um restaurante
+---
 
-Retornar o prato mais votado
+##  Regras de Negócio
 
-Lançar exceções quando cliente ou restaurante não existem
+- Um cliente só pode votar em um restaurante que já visitou  
+- Clientes são identificados exclusivamente pelo email  
+- Não é permitido voto sem visita prévia  
+- Não é permitido votar ou visitar restaurantes inexistentes  
 
-## Sistema_PRWTest
-Classe de testes unitários utilizando JUnit 5.
+**Limites do sistema:**
+- Até **100 clientes**  
+- Até **50 restaurantes**  
 
-Testes implementados:
-
-- Registrar voto quando o cliente visitou o restaurante
-
-## Regras de Negócio
-Um cliente só pode votar em um restaurante que já visitou
-
-Clientes são identificados exclusivamente pelo email
-
-Não é permitido voto sem visita prévia
-
-Não é permitido votar ou visitar restaurantes inexistentes
-
-Limites do sistema:
-
-Até 100 clientes
-
-Até 50 restaurantes
-
-##Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 Java (POO)
 
@@ -135,7 +120,7 @@ Execute a classe de testes:
 Sistema_PRWTest
 ```
 
-##Aprendizados
+## Aprendizados
 
 -Este projeto aborda conceitos fundamentais como:
 
