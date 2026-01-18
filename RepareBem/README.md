@@ -79,3 +79,6 @@ O projeto utiliza **JUnit 5** para garantir o funcionamento correto das regras d
 - Testes unitários
 - Boas práticas em métodos getters e setters
 
+## Autor
+
+Kaio Vitor - [GitHub](https://github.com/Kaio-0708)
