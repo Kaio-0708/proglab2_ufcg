@@ -1,4 +1,4 @@
-#📘 Diário de Bordo em Java
+# Diário de Bordo em Java
 
 Este projeto implementa um **Diário de Classe** simples em Java, executado via **linha de comando**, permitindo registrar, consultar, listar e pesquisar anotações de aulas associadas a datas específicas.
 
