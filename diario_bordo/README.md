@@ -70,9 +70,6 @@ Classe responsável por iniciar o programa.
 4- pesquisar palavra-chave
 5- sair
 
-yaml
-Copiar código
-
 ---
 
 ##  Como Executar
@@ -87,7 +84,7 @@ Copiar código
 ```
 javac diario_bordo/*.java
 ```
-▶️ Execução
+ Execução
 O programa exige 1 argumento, que representa o número máximo de aulas (anotações):
 
 ```
