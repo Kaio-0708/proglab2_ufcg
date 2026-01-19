@@ -65,9 +65,13 @@ Classe responsável por iniciar o programa.
 ##  Menu do Programa
 
 1- adicionar anotacao
+
 2- pesquisar i-esima anotacao
+
 3- listar anotacoes
+
 4- pesquisar palavra-chave
+
 5- sair
 
 ---
