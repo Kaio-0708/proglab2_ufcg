@@ -271,4 +271,55 @@ public class Sistema_PRW {
     	return lista;
     	
     }
+    
+    /**
+     * Retorna a lista de restaurantes cadastrados no sistema.
+     * 
+     * A lista retornada é uma cópia da coleção interna, evitando
+     * a modificação direta dos dados do sistema.
+     * 
+     * @return lista de restaurantes cadastrados
+     */
+    public List<Restaurante> getRestaurantes() {
+    	return new ArrayList<>(restaurantes.values());
+    }
+
+    /**
+     * Retorna a lista de clientes cadastrados no sistema.
+     * 
+     * A lista retornada é uma cópia da coleção interna, evitando
+     * a modificação direta dos dados do sistema.
+     * 
+     * @return lista de clientes cadastrados
+     */
+    public List<Cliente> getClientes() {
+    	return new ArrayList<>(clientes.values());
+    }
+
+    /**
+     * Gera o relatório geral do sistema.
+     * 
+     * @return uma string contendo o relatório geral formatado
+     */
+    public String gerarRelatorioGeral() {
+    	return new RelatorioGeral(this).gerar();
+    }
+
+    /**
+     * Gera o relatório financeiro do sistema.
+     * 
+     * @return uma string contendo o relatório financeiro formatado
+     */
+    public String gerarRelatorioFinanceiro() {
+    	return new RelatorioFinanceiro(this).gerar();
+    }
+
+    /**
+     * Gera o relatório de engajamento do sistema.
+     * 
+     * @return uma string contendo o relatório de engajamento formatado
+     */
+    public String gerarRelatorioEngajamento() {
+    	return new RelatorioEngajamento(this).gerar();
+    }
 }
