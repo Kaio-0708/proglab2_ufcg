@@ -38,6 +38,15 @@ public class Restaurante {
 	}
 
 	/**
+	 * Retorna a lista de visitas associadas ao livro.
+	 *
+	 * @return uma lista de {@link Visita} contendo todas as visitas registradas
+	 */
+	public List<Visita> getLivroVisitas() {
+    	return livroVisitas;
+    }
+	
+	/**
 	 * Retorna o conjunto de clientes que já visitaram o restaurante.
 	 * 
 	 * @return conjunto de clientes
