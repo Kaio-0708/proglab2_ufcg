@@ -84,11 +84,7 @@ public class Sistema_PRW {
 	   if (restaurante == null || cliente == null) {
 		   throw new IllegalArgumentException("Restaurante ou cliente não encontrado!");
 	    }
-	   
-	   if(restaurante.getClientes().contains(cliente)) {
-		   return;
-	   }
-	   
+	   	   
 	   LocalDate data = LocalDate.now();
 	   Visita visita = new Visita(data, cliente, restaurante);
 	   restaurante.registrarVisita(visita);
@@ -109,10 +105,6 @@ public class Sistema_PRW {
 	   if (restaurante == null || cliente == null) {
 		   throw new IllegalArgumentException("Restaurante ou cliente não encontrado!");
 	    }
-	   
-	   if(restaurante.getClientes().contains(cliente)) {
-		   return;
-	   }
 	   
 	   LocalDate data = LocalDate.now();
 	   Visita visita = new Visita(data, cliente, restaurante, comentario);
