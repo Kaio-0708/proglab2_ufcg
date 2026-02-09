@@ -151,6 +151,7 @@ public class Restaurante {
 		Cliente cliente = visita.getCliente();
 		clientes.add(cliente);
 		livroVisitas.add(visita);
+		cliente.registrarGasto(valorMenu);
 	}
 
 	/**
