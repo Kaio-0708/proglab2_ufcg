@@ -291,4 +291,25 @@ class SistemaPRWTeste {
     	
     	assertTrue(resultado.contains(resultado));
     }
+    
+    @Test
+    void deveListarTodasAsVisitas() {
+        sistema.adicionarCliente("Ana", "ana@email.com");
+        sistema.adicionarRestaurante("Rest1", "Pizza");
+
+        sistema.visitarRestaurante("ana@email.com", "Rest1");
+
+        assertEquals(1, sistema.listarLivroVisitas("Rest1").length);
+    }
+    
+    @Test
+    void deveListarVisitasRecentes() {
+        sistema.adicionarCliente("Ana", "ana@email.com");
+        sistema.adicionarRestaurante("Rest1", "Pizza");
+
+        sistema.visitarRestaurante("ana@email.com", "Rest1");
+
+        String[] visitas = sistema.listarLivroVisitas("Rest1", 1);
+        assertEquals(1, visitas.length);
+    }
 }
