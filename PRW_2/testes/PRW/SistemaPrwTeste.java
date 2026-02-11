@@ -1,7 +1,7 @@
 package PRW;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -144,4 +144,31 @@ class SistemaPRWTeste {
         assertTrue(relatorio.contains("Cliente: Jo | Restaurante: Coffee | Visitas: 1"));
     }
 	
+    @Test
+    void deveAdicionarRestaurante() {
+    	sistema.adicionarRestaurante("Galiotte", "lasanha");
+    	
+    	assertTrue(true);
+    }
+    
+    @Test
+    void naoDeveAdicionarRestaurante() {
+    	sistema.adicionarRestaurante("Galiotte", "lasanha");
+    	
+    	assertFalse(false);
+    }
+    
+    @Test
+    void deveAdicionarCliente() {
+    	sistema.adicionarCliente("Kaio", "Kaio@gmail.com");
+    	
+    	assertTrue(true);
+    }
+    
+    @Test
+    void NaodeveAdicionarCliente() {
+    	sistema.adicionarCliente("Kaio", "Kaio@gmail.com");
+    	
+    	assertFalse(false);
+    }
 }
