@@ -1,5 +1,6 @@
 package PRW;
 
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
@@ -170,5 +171,124 @@ class SistemaPRWTeste {
     	sistema.adicionarCliente("Kaio", "Kaio@gmail.com");
     	
     	assertFalse(false);
+    }
+    
+    @Test
+    void deveVisitarRestauranteBasica() {
+    	sistema.adicionarRestaurante("Galiotte", "lasanha");
+    	sistema.adicionarCliente("Kaio", "Kaio@gmail.com");
+    	sistema.visitarRestaurante("Kaio@gmail.com", "Galiotte");
+    	
+    	assertEquals(1, sistema.listarLivroVisitas("Galiotte").length);
+    }
+    
+    @Test
+    void deveRegistrarMultiplasVisitarRestaurante() {
+    	sistema.adicionarRestaurante("Galiotte", "lasanha");
+    	sistema.adicionarCliente("Kaio", "Kaio@gmail.com");
+    	sistema.visitarRestaurante("Kaio@gmail.com", "Galiotte");
+    	sistema.visitarRestaurante("Kaio@gmail.com", "Galiotte");
+    	sistema.visitarRestaurante("Kaio@gmail.com", "Galiotte");
+    	
+    	assertEquals(3, sistema.listarLivroVisitas("Galiotte").length);
+    }
+    
+    @Test
+    void deveLancarExcecaoVisitarRestaurante() {
+    	sistema.adicionarRestaurante("Galiotte", "lasanha");
+    	
+    	assertThrows(IllegalArgumentException.class, () -> {
+            sistema.visitarRestaurante("", "Galiotte");
+        });
+    }
+    
+    @Test
+    void deveLancarExcecaoVisitarRestauranteSemRestaurante() {
+    	sistema.adicionarCliente("Kaio", "Kaio@gmail.com");
+    	
+    	assertThrows(IllegalArgumentException.class, () -> {
+    		sistema.visitarRestaurante("Kaio@gmail.com", "");
+    	});
+    }
+    
+    @Test
+    void deveVisitarRestauranteComentario() {
+    	sistema.adicionarRestaurante("Galiotte", "lasanha");
+    	sistema.adicionarCliente("Kaio", "Kaio@gmail.com");
+    	sistema.visitarRestaurante("Kaio@gmail.com", "Galiotte", "Comida muito boa");
+    	
+    	assertEquals(1, sistema.listarLivroVisitas("Galiotte").length);
+    }
+    
+    @Test
+    void obtemGastoCliente() {
+    	sistema.adicionarCliente("Kaio", "Kaio@gmail.com");
+    	sistema.adicionarRestaurante("Galiotte", "lasanha");
+        sistema.visitarRestaurante("Kaio@gmail.com", "Galiotte", "Muito bom");
+    	
+        assertEquals(89.9, sistema.obtemGastoCliente("Kaio@gmail.com"));
+    }
+    
+    @Test
+    void obtemGastoClienteZero() {
+    	sistema.adicionarCliente("Kaio", "Kaio@gmail.com");
+    	
+    	assertEquals(0.0, sistema.obtemGastoCliente("Kaio@gmail.com"));
+    }
+    
+    @Test
+    void deveListarClientesRestaurante() {
+    	sistema.adicionarRestaurante("Galiotte", "lasanha");
+    	sistema.adicionarCliente("Kaio", "Kaio@gmail.com");
+    	sistema.adicionarCliente("João", "joao@email.com");
+    	
+    	sistema.visitarRestaurante("Kaio@gmail.com", "Galiotte", "Muito bom");
+    	sistema.visitarRestaurante("joao@email.com", "Galiotte", "Muito bom");
+    	
+    	String[] clientes = sistema.listarClientesRestaurante("Galiotte");
+    	
+    	assertEquals(2, clientes.length);
+    }
+    
+    @Test
+    void deveLancarExcecaoListarClientesRestaurante() {
+    	sistema.adicionarCliente("Kaio", "Kaio@gmail.com");
+    	
+    	assertThrows(IllegalArgumentException.class, () -> {
+    		sistema.listarClientesRestaurante("");
+    	});
+    }
+    
+    @Test
+    void deveVotarPratoPreferido() {
+    	sistema.adicionarRestaurante("Galiotte", "lasanha");
+    	sistema.adicionarCliente("Kaio", "Kaio@gmail.com");
+    	sistema.visitarRestaurante("Kaio@gmail.com", "Galiotte");
+    	
+    	String resultado = sistema.votarPratoPreferido("Kaio@gmail.com", "Galiotte");
+    	
+    	assertEquals("Voto registrado com sucesso!", resultado);
+    }
+    
+    @Test
+    void melhorPrato() {
+    	sistema.adicionarRestaurante("Galiotte", "lasanha");
+    	sistema.adicionarCliente("Ana", "ana@email.com");
+    	sistema.votarPratoPreferido("ana@email.com", "Galiotte");
+    	
+    	String resultado = sistema.melhorPrato();
+    	
+    	assertEquals("Melhor prato: lasanha Restaurante: Galiotte", resultado);
+    }
+    
+    @Test
+    void deveRetornarMelhorPrato() {
+    	sistema.adicionarRestaurante("Galiotte", "lasanha");
+    	sistema.adicionarCliente("Ana", "ana@email.com");
+    	sistema.votarPratoPreferido("ana@email.com", "Galiotte");
+    	
+    	String resultado = sistema.melhorPrato();
+    	
+    	assertTrue(resultado.contains(resultado));
     }
 }
