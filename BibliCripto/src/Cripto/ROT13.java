@@ -3,7 +3,6 @@ package Cripto;
 public class ROT13 implements Criptografia{
 	@Override
 	public String criptografar(String texto) {
-		
 		String resultado = "";
 		
 		for(int i = 0; i < texto.length(); i++) {
