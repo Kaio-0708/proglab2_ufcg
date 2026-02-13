@@ -77,7 +77,7 @@ public class JobYPAppController {
 	
 	public void aplicarParaJob(String cpf, int indexJob) {
 		Pessoa pessoa = this.pessoas.get(cpf);
-		if(pessoa.getCpf() ==  null) {
+		if(pessoa ==  null) {
 			throw new IllegalArgumentException("CPF não encontrado");
 		}
 		
@@ -129,7 +129,7 @@ public class JobYPAppController {
 		Job vaga = jobs.get(indexJob);
 		Pessoa pessoa = this.pessoas.get(cpf);
 		
-		if(pessoa.getCpf() ==  null) {
+		if(pessoa ==  null) {
 			throw new IllegalArgumentException("CPF não encontrado");
 		}
 		
@@ -151,7 +151,7 @@ public class JobYPAppController {
 	public int qtdConvocacoesPessoa(String cpf) {
 		Pessoa pessoa = this.pessoas.get(cpf);
 		
-		if(pessoa.getCpf() ==  null) {
+		if(pessoa ==  null) {
 			throw new IllegalArgumentException("CPF não encontrado");
 		}
 		
