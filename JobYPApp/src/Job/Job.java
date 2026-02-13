@@ -95,7 +95,6 @@ public class Job {
 		return resultado;
 	}
 	
-	
 	@Override
 	public String toString() {
 		return "Nome da Empresa" + this.nomeEmpresa + "\n" + "Descrição" + this.descricao +  "\n" + "Vagas" + this.vagas+ "\n" + "Contato" + this.contato + "\n" + "Habilidades" + this.habilidades;
