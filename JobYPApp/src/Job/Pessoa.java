@@ -8,6 +8,7 @@ public class Pessoa {
 	private String cpf;
 	private String link;
 	private String[] habilidades;
+	private ArrayList<String> convocacoes = new ArrayList<>();
 	
 	public Pessoa(String nome, String cpf, String[] habilidades) {
 		this(nome, cpf, null, habilidades);
@@ -38,6 +39,12 @@ public class Pessoa {
 	
 	public void mudarLink(String link) {
 		this.link = link;
+	}
+	
+	public void registrarContatoDeConvocacao(String empresa) {
+		if(convocacoes.size() < 5 ) {
+			convocacoes.add(empresa);
+		}
 	}
 	
 	@Override
