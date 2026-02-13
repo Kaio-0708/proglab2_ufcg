@@ -75,9 +75,16 @@ public class Job {
 		
 			double percentual = calcularPercentualDeChance(pessoa);
 			String link = pessoa.getLink();
+			String linkFormatado = "";
 			
-			resultado += "Nome: " + pessoa.getNome() 
-						+ "Link: " + link
+			if(link == null) {
+				linkFormatado = "Vazio";
+			}else {
+				linkFormatado = link;
+			}
+			
+			resultado += "Nome: " + pessoa.getNome() + "\n"
+						+ "Link: " + linkFormatado + "\n"
 						+ "Percentual: " + percentual + "%";
 		}
 		
