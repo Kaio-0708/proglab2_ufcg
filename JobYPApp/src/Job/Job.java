@@ -1,5 +1,6 @@
 package Job;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Job {
@@ -8,6 +9,7 @@ public class Job {
 	private int vagas;
 	private String contato;
 	private String[] habilidades;
+	private HashMap<String, Pessoa> candidatos = new HashMap<>();
 	
 	public Job(String nomeEmpresa, String descricao, int vagas, String contato, String[] habilidades) {
 		this.nomeEmpresa = nomeEmpresa;
@@ -63,7 +65,26 @@ public class Job {
 		
 		return percentual;
 	}
-
+	
+	public String listarCandidatos() {
+		String resultado = "";
+		ArrayList<Pessoa> lista = new ArrayList<>(candidatos.values());
+		
+		for(int i = 0; i < lista.size(); i++) {
+			Pessoa pessoa = lista.get(i);
+		
+			double percentual = calcularPercentualDeChance(pessoa);
+			String link = pessoa.getLink();
+			
+			resultado += "Nome: " + pessoa.getNome() 
+						+ "Link: " + link
+						+ "Percentual: " + percentual + "%";
+		}
+		
+		return resultado;
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "Nome da Empresa" + this.nomeEmpresa + "\n" + "Descrição" + this.descricao +  "\n" + "Vagas" + this.vagas+ "\n" + "Contato" + this.contato + "\n" + "Habilidades" + this.habilidades;
