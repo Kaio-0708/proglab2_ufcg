@@ -21,6 +21,10 @@ public class Pessoa {
 		this.habilidades = habilidades;
 	}
 	
+	public ArrayList<String> getConvocacoes(){
+		return convocacoes;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
