@@ -19,6 +19,10 @@ public class Job {
 		this.habilidades = habilidades;
 	}
 	
+	public HashMap<String, Pessoa> getCandidatos(){
+		return candidatos;
+	}
+	
 	public String getNomeEmpresa() {
 		return nomeEmpresa;
 	}
