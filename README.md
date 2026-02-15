@@ -8,6 +8,8 @@ Contém exercícios, projetos práticos e anotações desenvolvidos ao longo do 
 - Boas práticas de programação
 - Uso da linguagem **Java**
 - Estruturas de dados e algoritmos básicos
+- Princípios GRASP (Design de Software)
+- Design Patterns (padrões de projeto de software)
 
 ## Objetivo do Repositório
 
