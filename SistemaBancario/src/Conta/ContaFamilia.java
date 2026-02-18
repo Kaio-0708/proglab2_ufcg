@@ -26,5 +26,4 @@ public class ContaFamilia implements Contabil{
 	public void depositar(double valor) {
 		saldo += valor;
 	}
-
 }
