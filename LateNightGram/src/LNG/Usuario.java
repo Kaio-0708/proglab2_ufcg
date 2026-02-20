@@ -30,6 +30,10 @@ public class Usuario {
 		return nome;
 	}
 	
+	public List<Post> getPosts(){
+		return this.posts;
+	}
+	
 	public boolean isEspecialista() {
 	    return especialista;
 	}
