@@ -19,15 +19,19 @@ composes Cronica, Usuario
 Cronica
 association Usuario
 ---
+- tema: String
 - titulo: String
 - texto: String
 - autor: Usuario
-- curtidas: int
+- curtida: int
 ---
-+ Cronica(titulo: String, texto:String, autor: Usuario)
-+ getsSets(): void
++ Cronica(autor: Usuario, tema: String, titulo: String, texto:String)
++ getAutor(): Usuario
++ getTema(): String
++ getTitulo(): String
++ getTexto(): String
++ getCurtida(): int
 + curtir(): void
-+ tornarEspecialista(): void
 + toString(): String
 + equals(obj: Object): boolean
 + hashCode(): int
@@ -36,14 +40,20 @@ association Usuario
 Usuario
 composes Post
 ---
+- nick:String
 - nome:String
 - email:String
 - posts: List<Post>
 - especialista: boolean
 ---
-+ Usuario(email:String, nome:String)
-+ getsSets(): void
++ Usuario(nick:String, email:String, nome:String)
++ getNick(): String
++ getEmail(): String
++ getNome(): String
++ isEspecialista(): boolean
++ tornarEspecialista(): void
 + curtirPost(pos: int): void
++ adicionarPost(texto: String, link: String): void
 + toString(): String
 + equals(obj: Object): boolean
 + hashCode(): int
@@ -53,10 +63,12 @@ Post
 ---
 - texto: String
 - link: String
-- curtidas: int
+- curtida: int
 ---
 + Post(texto: String, link: String)
-+ getsSets(): void
++ getTexto(): String
++ getLink(): String
++ getCurtida(): int
 + curtir(): void
 + toString(): String
 ---
