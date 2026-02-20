@@ -43,4 +43,27 @@ public class LateNigthGramController {
 		
 		return lista;
 	}
+	
+	public int fazerPostUsuario(String nick, String texto, String link) {
+		Usuario u = usuarios.get(nick);
+		
+		if (u == null) {
+	        throw new IllegalArgumentException("Usuário não encontrado");
+	    }
+		
+		u.adicionarPost(texto, link);
+		return 0;
+	}
+	
+	public String[] exibirPostUsuario(String nick) {
+		Usuario u = usuarios.get(nick);
+		List<Post> posts = u.getPosts();
+		String[] exibir = new String[posts.size()];
+		
+		for(int i = 0; i < posts.size(); i++) {
+			exibir[i] = posts.get(i).toString();
+		}
+		
+		return exibir;
+	}
 }
