@@ -1,0 +1,62 @@
+LateNightGram
+composes Cronica, Usuario
+---
+- usuarios: Map<String. Usuario>
+- cronicas: Set<Cronica>
+---
++ cadastrarUsuario( nick:String, email:String, nome:String):void 
++ recuperarUsuario( nick:String):String 
++ listarUsuarios():String[] 
++ fazerPostUsuario( nick:String, texto:String, link:String ):int //retorna posicao 
++ exibirPostsUsuário( nick:String):String[] 
++ cadastrarCronica( nick:String, tema:String, titulo:String, texto:String ):boolean 
++ listarCronicasTema( tema:String ):String[] 
++ curtirPostAutor( nickAutor:String,  posPost:int ): boolean 
++ curtirCronica( titulo:String ): boolean 
++ listarEspecialistas():String[] 
+---
+
+Cronica
+association Usuario
+---
+- titulo: String
+- texto: String
+- autor: Usuario
+- curtidas: int
+---
++ Cronica(titulo: String, texto:String, autor: Usuario)
++ getsSets(): void
++ curtir(): void
++ tornarEspecialista(): void
++ toString(): String
++ equals(obj: Object): boolean
++ hashCode(): int
+---
+
+Usuario
+composes Post
+---
+- nome:String
+- email:String
+- posts: List<Post>
+- especialista: boolean
+---
++ Usuario(email:String, nome:String)
++ getsSets(): void
++ curtirPost(pos: int): void
++ toString(): String
++ equals(obj: Object): boolean
++ hashCode(): int
+---
+
+Post
+---
+- texto: String
+- link: String
+- curtidas: int
+---
++ Post(texto: String, link: String)
++ getsSets(): void
++ curtir(): void
++ toString(): String
+---
