@@ -2,8 +2,11 @@ package Agenda;
 
 public class Workshop extends Evento{
 	
-	public Workshop(String titulo, String descricao, String data, int maxParticipantes) {
+	private int duracao;
+
+	public Workshop(String titulo, String descricao, String data, int maxParticipantes, int duracao) {
 		super(titulo, descricao, data, maxParticipantes);
+		this.duracao = duracao;
 	}
 
 	@Override
@@ -14,7 +17,6 @@ public class Workshop extends Evento{
 
 	@Override
 	public int calcularPontuacao() {
-		// TODO Auto-generated method stub
-		return 0;
+		return duracao;
 	}
 }
