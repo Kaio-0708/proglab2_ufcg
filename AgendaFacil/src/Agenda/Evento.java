@@ -47,6 +47,7 @@ public abstract class Evento {
 		}
 		
 		participantes.put(participante.getEmail(), participante);
+		
 		return true;
 	}
 	
