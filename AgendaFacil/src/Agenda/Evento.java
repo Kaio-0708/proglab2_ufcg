@@ -39,7 +39,7 @@ public abstract class Evento {
 	
 	public boolean inscreverParticipante(Estudante participante) {
 		if(participantes.size() >= maxParticipantes) {
-			throw new IllegalArgumentException("Atingiu o número máximod e vagas!");
+			throw new IllegalArgumentException("Atingiu o número máximo de vagas!");
 		}
 		
 		if(participantes.containsKey(participante.getEmail())) {
