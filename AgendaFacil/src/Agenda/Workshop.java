@@ -1,5 +1,8 @@
 package Agenda;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Workshop extends Evento{
 	
 	private int duracao;
@@ -11,8 +14,15 @@ public class Workshop extends Evento{
 
 	@Override
 	public String exibirDetalhes() {
-		// TODO Auto-generated method stub
-		return null;
+		String detalhes = "Titulo: " + titulo + "\n Descrição: " + descricao + "\n Data: " + data + "\n Pontuação: " + calcularPontuacao() + "\n Duracao: " + duracao + " horas" + "\n Nome dos Participantes: ";
+		
+		List<Estudante> lista = new ArrayList<>(participantes.values());
+		
+		for(int i = 0; i < lista.size(); i++) {
+			detalhes = detalhes + " " + lista.get(i).getNome();
+		}
+		
+		return detalhes;
 	}
 
 	@Override
