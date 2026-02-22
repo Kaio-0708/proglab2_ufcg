@@ -39,14 +39,16 @@ public abstract class Evento {
 	
 	public boolean inscreverParticipante(Estudante participante) {
 		if(participantes.size() >= maxParticipantes) {
-			return false;
+			throw new IllegalArgumentException("Atingiu o número máximod e vagas!");
 		}
 		
 		if(participantes.containsKey(participante.getEmail())) {
-			return false;
+			throw new IllegalArgumentException("Já está inscrito!");
 		}
 		
 		participantes.put(participante.getEmail(), participante);
+		participante.adicionarPontos(calcularPontuacao());;
+		participante.adicionarEvento();
 		
 		return true;
 	}
