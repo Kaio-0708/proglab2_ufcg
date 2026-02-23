@@ -26,5 +26,4 @@ public class Palestra extends Evento{
 	public int calcularPontuacao() {
 		return 2;
 	}
-
 }
