@@ -47,7 +47,7 @@ public abstract class Evento {
 		}
 		
 		participantes.put(participante.getEmail(), participante);
-		participante.adicionarPontos(calcularPontuacao());;
+		participante.adicionarPontos(calcularPontuacao());
 		participante.adicionarEvento();
 		
 		return true;
