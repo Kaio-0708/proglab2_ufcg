@@ -14,7 +14,7 @@ class AgendaFacilControllerTest {
 	}
 	
 	@Test
-	void listarEstudantesEmOrdemDescrecente() {
+	void listarEstudantesEmOrdemDecrescente() {
 		agenda.cadastrarEstudante("Kaio", "kaio@gmail.com");
 		agenda.cadastrarEstudante("Vitor", "vitor@gmail.com");
 		
@@ -31,7 +31,7 @@ class AgendaFacilControllerTest {
 	}
 	
 	@Test
-	void listarMultiplosEstudantesEmOrdemDescrecente() {
+	void listarMultiplosEstudantesEmOrdemDecrescente() {
 		agenda.cadastrarEstudante("Kaio", "kaio@gmail.com");
 		agenda.cadastrarEstudante("Pedro", "pedro@gmail.com");
 		agenda.cadastrarEstudante("Antonio", "antonio@gmail.com");
