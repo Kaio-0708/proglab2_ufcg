@@ -15,7 +15,7 @@ class EsporteFacilControllerTest {
 	}
 	
 	@Test
-	void listarAtletaPorOrdemDescrecente() {
+	void listarAtletaPorOrdemDecrescente() {
 		esporte.cadastrarAtleta("Kaio", "kaio@gmail.com");
 		esporte.cadastrarAtleta("Vitor", "vitor@gmail.com");
 		
@@ -32,7 +32,7 @@ class EsporteFacilControllerTest {
 	}
 	
 	@Test
-	void listarMultiplosAtletaPorOrdemDescrecente() {
+	void listarMultiplosAtletaPorOrdemDecrescente() {
 		esporte.cadastrarAtleta("Kaio", "kaio@gmail.com");
 		esporte.cadastrarAtleta("Vitor", "vitor@gmail.com");
 		esporte.cadastrarAtleta("Livia", "livia@gmail.com");
