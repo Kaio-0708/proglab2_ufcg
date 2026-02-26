@@ -24,6 +24,7 @@ public class AcademiaProController {
 		}
 		
 		alunos.put(cpf, aluno);
+		
 		return true;
 	}
 	
