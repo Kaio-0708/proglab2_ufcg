@@ -8,11 +8,11 @@ public class Aluno {
 	private int pontuacao;
 	private int quantidadeTreino;
 	
-	public Aluno(String nome, String cpf, int pontuacao, int quantidadeTreino) {
+	public Aluno(String nome, String cpf) {
 		this.nome = nome;
 		this.cpf = cpf;
-		this.pontuacao = pontuacao;
-		this.quantidadeTreino = quantidadeTreino;
+		this.pontuacao = 0;
+		this.quantidadeTreino = 0;
 	}
 	
 	public String getNome() {
