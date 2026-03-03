@@ -11,7 +11,7 @@ public class Eletrica extends Turma{
 	public Eletrica(String titulo, String descricao, String data, int maxParticipantes, int duracao, boolean certificacao) {
 		super(titulo, descricao, data, maxParticipantes);
 		this.duracao = duracao;
-		this.certificacao = true;
+		this.certificacao = certificacao;
 	}
 
 	@Override
