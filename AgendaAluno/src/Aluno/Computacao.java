@@ -11,7 +11,7 @@ public class Computacao extends Turma{
 
 	@Override
 	public String exibirDetalhes() {
-		String detalhes = "TIulo: " + titulo + "\n Descrição: " + descricao + "\n Data: " + data + "\n Pontuacao: " + calcularPontuacao() + "Participantes: " + maxParticipantes;
+		String detalhes = "Titulo: " + titulo + "\n Descrição: " + descricao + "\n Data: " + data + "\n Pontuacao: " + calcularPontuacao() + "Participantes: " + maxParticipantes;
 		
 		List<Estudante> e = new ArrayList<>(estudantes.values());
 		
