@@ -41,7 +41,14 @@ public class TechCursoController {
 	public String[] listarAlunos() {
 		List<Aluno> aluno = new ArrayList<>(alunos.values());
 		
-		aluno.sort((a1, a2) -> Integer.compare(a1.getPontos(), a2.getPontos()));
+		aluno.sort((a1, a2) -> {int comparacao = Integer.compare(a1.getPontos(), a2.getPontos());
+		
+		if(comparacao != 0) {
+			return comparacao;
+		}else{
+			return a1.getNome().compareTo(a2.getNome());
+		}
+		});
 		
 		String[] lista = new String[aluno.size()];
 		
@@ -95,7 +102,7 @@ public class TechCursoController {
 		    throw new IllegalArgumentException("Curso não encontrado!");
 		}
 		
-		curso.MatriculaAluno(aluno);
+		curso.matriculaAluno(aluno);
 		
 		return true;
 	}
