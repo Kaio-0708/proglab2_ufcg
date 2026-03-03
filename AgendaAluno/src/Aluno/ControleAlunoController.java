@@ -88,7 +88,7 @@ public class ControleAlunoController {
 		String[] lista = new String[e.size()];
 		
 		for(int i = 0; i < e.size(); i++) {
-			lista[i] = e.get(i).getNome();
+			lista[i] = e.get(i).getEmail();
 		}
 		
 		return lista;
@@ -144,6 +144,10 @@ public class ControleAlunoController {
 	
 	public String exibirDetalhesTurma(int idTurma) {
 		Turma t = turmas.get(idTurma);
+		
+		if(t == null) {
+		    throw new IllegalArgumentException("Turma não encontrada");
+		}
 		
 		return t.exibirDetalhes();
 	}
