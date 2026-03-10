@@ -110,7 +110,7 @@ IDE compatível com Java (IntelliJ, Eclipse, VS Code)
 ## Como Executar o Projeto
 Clone o repositório:
 ```
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/Kaio-0708/proglab2_ufcg
 ```
 
 Abra o projeto em sua IDE Java
