@@ -28,11 +28,17 @@ O programa contém métodos que realizam as seguintes operações:
 
 ProcessoSeletivo.java
 ├── main()                     # Executa o programa
+
 ├── entrandoContato()           # Simula tentativas de contato com candidato
+
 ├── atender()                   # Gera resposta aleatória do candidato
+
 ├── imprimirSelecionados()      # Exibe os candidatos
+
 ├── selecaoCandidato()          # Seleciona candidatos com base no salário
+
 ├── valorPretendido()           # Gera salário pretendido aleatório
+
 └── analisarCandidato()         # Avalia candidatos para possível contato 
 
 ## Como Executar
