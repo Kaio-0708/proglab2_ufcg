@@ -42,14 +42,14 @@ O projeto **AcademiaPro** foi desenvolvido seguindo princípios de **Programaç�
 
 ###  Conceitos de POO Aplicados
 
-**Abstração**
+## Abstração
 
 O sistema utiliza uma **classe abstrata** para representar o conceito geral de treino:
 Treino
 
 Essa classe define atributos e comportamentos comuns, além de um método abstrato responsável pelo cálculo de pontuação.
 
-**Herança**
+## Herança
 
 Os diferentes tipos de treino herdam da classe base `Treino`:
 
@@ -63,14 +63,14 @@ Treino
 
 Cada tipo de treino possui características próprias, mas reutiliza a estrutura comum definida na classe base.
 
-**Polimorfismo**
+## Polimorfismo
 
 Cada tipo de treino implementa sua própria lógica de pontuação através do método:
 calcularPontos()
 
 Isso permite que o sistema trate todos os treinos de forma genérica, mas com comportamentos específicos.
 
-**Encapsulamento**
+## Encapsulamento
 
 O projeto protege o estado interno das classes utilizando:
 private,
@@ -111,8 +111,8 @@ TreinoFuncionalTest
 TreinoMusculacaoTest
 ```
 
-## Curso: Bacharelado em Ciência da Computação - UFCG
-
 ## Autor
 
 Kaio Vitor - [GitHub](https://github.com/Kaio-0708)
+
+## Curso: Bacharelado em Ciência da Computação - UFCG
