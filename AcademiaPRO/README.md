@@ -23,11 +23,17 @@ PRO
 Contendo as seguintes classes principais:
 
 PRO
+
 ├── AcademiaProController.java
+
 ├── Aluno.java
+
 ├── Treino.java
+
 ├── TreinoCardio.java
+
 ├── TreinoFuncional.java
+
 ├── TreinoMusculacao.java
 
 ##  Arquitetura e Conceitos de POO
@@ -48,8 +54,11 @@ Essa classe define atributos e comportamentos comuns, além de um método abstra
 Os diferentes tipos de treino herdam da classe base `Treino`:
 
 Treino
+
 ├── TreinoCardio
+
 ├── TreinoFuncional
+
 └── TreinoMusculacao
 
 Cada tipo de treino possui características próprias, mas reutiliza a estrutura comum definida na classe base.
@@ -101,6 +110,8 @@ TreinoCardioTest
 TreinoFuncionalTest
 TreinoMusculacaoTest
 ```
+
+## Curso: Bacharelado em Ciência da Computação - UFCG
 
 ## Autor
 
