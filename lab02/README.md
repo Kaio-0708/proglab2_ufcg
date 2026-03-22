@@ -174,7 +174,7 @@ Classe adicional para testes avançados de busca em resumos.
 
 - Java (POO)
 
-- IDE compatível com Java (IntelliJ, Eclipse, VS Code)
+- IDE (Eclipse)
 
 ## Aprendizados
 
