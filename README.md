@@ -4,7 +4,7 @@ Repositório destinado aos estudos e implementações das disciplinas **Programa
 
 Contém exercícios, projetos práticos e anotações desenvolvidos ao longo do curso, com foco em:
 
-- Orientação a objetos (POO)
+- Orientação a objetos (POO): Abstração, Polimorfismo, Herança e Encapsulamento. 
 - Boas práticas de programação
 - Uso da linguagem **Java**
 - Estruturas de dados e algoritmos básicos
