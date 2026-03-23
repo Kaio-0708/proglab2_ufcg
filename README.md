@@ -10,6 +10,7 @@ Contém exercícios, projetos práticos e anotações desenvolvidos ao longo do 
 - Estruturas de dados e algoritmos básicos
 - Princípios GRASP (Design de Software)
 - Design Patterns (padrões de projeto de software)
+- Modelagem UML (diagramas de classes, relacionamento e estrutura de sistemas)
 
 ## Objetivo do Repositório
 
