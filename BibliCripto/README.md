@@ -47,7 +47,7 @@ Classe principal do sistema, responsável por gerenciar os textos e aplicar os a
 - Listar textos inseridos  
 - Alterar algoritmo de criptografia dinamicamente  
 
-### Criptografia (Interface)
+### Criptografia 
 Define o contrato para os algoritmos de criptografia.
 
 **Funcionalidades:**
@@ -104,7 +104,6 @@ Classe de testes unitários utilizando JUnit 5.
 ## Tecnologias Utilizadas
 
 - Java (POO)
-
 - JUnit 5
 
 ## Aprendizados
