@@ -54,7 +54,6 @@ O projeto consiste em um sistema de gerenciamento de atividades esportivas, perm
 
 #### Treino
 - Pontuação fixa:
-
 2 pontos
 
 #### Campeonato
