@@ -7,10 +7,6 @@ Projeto desenvolvido como parte da disciplina de **Programação em Laboratório
 A ideia central do sistema é reduzir o caráter solitário da leitura, permitindo que leitores que já finalizaram um livro possam se reunir para conversar e trocar experiências sobre a obra.
 Neste projeto, **não é necessário implementar a classe `Main`**, responsável pela interação direta com o usuário. O foco está na implementação da **classe de sistema `Escrevedeira`**, que fornece todas as funcionalidades que seriam invocadas pelo `Main`.
 
----
-
----
-
 ##  Estrutura do Repositório
 
 ```
@@ -30,8 +26,6 @@ As principais funcionalidades do projeto envolvem:
 - Aplicação de estruturas de dados básicas
 - Verificação do comportamento do sistema por meio de **testes automatizados com JUnit**
 
----
-
 ##  Como Executar
 
 ### Pré-requisitos
@@ -41,8 +35,6 @@ Antes de executar o projeto, é necessário ter instalado:
  **Java JDK** (versão 11 ou superior)  
  **Eclipse IDE**  
  **JUnit** configurado no projeto (geralmente já incluso nos projetos de laboratório a versão 5)
-
----
 
 ### Passo 1 — Clonar o Repositório
 
