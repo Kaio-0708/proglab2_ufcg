@@ -58,17 +58,14 @@ O projeto consiste em um sistema de gerenciamento de atividades esportivas, perm
 
 #### Campeonato
 - Pontuação baseada na duração:
-
 pontos = duração
 
 #### Workshop Técnico
 
 - Com certificado:
-
 pontos = duração + 10
 
 - Sem certificado:
-
 pontos = duração
 
 ### Inscrição
