@@ -22,10 +22,6 @@ public class Usuario {
 		return nick;
 	}
 	
-	public String getEmail() {
-		return email;
-	}
-	
 	public String getNome() {
 		return nome;
 	}
