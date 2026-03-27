@@ -48,7 +48,6 @@ composes Post
 ---
 + Usuario(nick:String, email:String, nome:String)
 + getNick(): String
-+ getEmail(): String
 + getNome(): String
 + isEspecialista(): boolean
 + tornarEspecialista(): void
