@@ -70,16 +70,6 @@ O sistema oferece diferentes formas de ordenação:
   - Inscrição de jogador inexistente
 - Exceções são lançadas para operações inválidas
 
-## Testes
-
-O projeto segue uma estrutura preparada para testes, permitindo validar:
-
-- Cadastro de jogadores
-- Inscrição em torneios
-- Distribuição de pontuação
-- Ordenação de ranking
-- Regras de negócio
-
 ## Objetivo Acadêmico
 
 Este projeto tem como foco:
