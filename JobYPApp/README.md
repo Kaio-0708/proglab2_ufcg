@@ -94,3 +94,8 @@ Controlador principal do sistema (Facade).
 - Sobrecarga de métodos
 - Regras de negócio centralizadas
 - Tratamento de exceções
+
+## Autor
+
+**Kaio Vitor**  
+Estudante de Computação - UFCG
