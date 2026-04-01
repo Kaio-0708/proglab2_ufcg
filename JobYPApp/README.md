@@ -88,7 +88,7 @@ Controlador principal do sistema (Facade).
 
 ### Conceitos Aplicados
 
--Encapsulamento
+- Encapsulamento
 - Coesão e baixo acoplamento
 - Uso de coleções
 - Sobrecarga de métodos
