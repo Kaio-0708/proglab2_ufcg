@@ -59,7 +59,7 @@ A compatibilidade entre candidato e vaga é baseada na quantidade de habilidades
 
 ## Estrutura do Projeto
 
-### Classe `Pessoa`
+### Classe Pessoa
 Representa um candidato no sistema.
 
 **Responsabilidades:**
@@ -68,7 +68,7 @@ Representa um candidato no sistema.
 - Controlar convocações recebidas
 - Atualizar link do currículo
 
-### Classe `Job`
+### Classe Job
 Representa uma vaga de emprego.
 
 **Responsabilidades:**
@@ -77,7 +77,7 @@ Representa uma vaga de emprego.
 - Calcular compatibilidade com candidatos
 - Listar candidatos com suas chances
 
-###  Classe `JobYPAppController`
+###  Classe JobYPAppController
 Controlador principal do sistema (Facade).
 
 **Responsabilidades:**
