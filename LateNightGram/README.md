@@ -55,7 +55,7 @@ O sistema também introduz um mecanismo de **reputação**, onde usuários podem
 
 ## Estrutura do Projeto
 
-### Classe `Usuario`
+### Classe Usuario
 Representa um usuário da rede.
 
 **Responsabilidades:**
@@ -64,14 +64,14 @@ Representa um usuário da rede.
 - Controlar status de especialista
 - Curtir posts
 
-### Classe `Post`
+### Classe Post
 Representa uma publicação simples.
 
 **Responsabilidades:**
 - Armazenar conteúdo do post
 - Registrar curtidas
 
-### Classe `Cronica`
+### Classe Cronica
 Representa um conteúdo mais elaborado com tema.
 
 **Responsabilidades:**
@@ -79,7 +79,7 @@ Representa um conteúdo mais elaborado com tema.
 - Controlar curtidas
 - Promover autor a especialista ao atingir 100 curtidas
 
-### Classe `LateNigthGramController`
+### Classe LateNigthGramController
 Controlador principal do sistema (Facade).
 
 **Responsabilidades:**
