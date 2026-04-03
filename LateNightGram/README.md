@@ -1,4 +1,4 @@
-# 🌙 LateNightGram 
+# LateNightGram 
 
 Projeto desenvolvido com foco em **Programação Orientada a Objetos (POO)**, simulando uma rede social onde usuários podem criar posts, escrever crônicas e interagir por meio de curtidas.
 
