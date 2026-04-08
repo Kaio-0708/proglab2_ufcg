@@ -43,35 +43,35 @@ O sistema utiliza **polimorfismo** por meio de uma interface comum para represen
 
 ## Estrutura do Projeto
 
-### Interface `Contabil`
+### Interface Contabil
 Define o comportamento comum de contas.
 
 **Métodos:**
 - `sacar(double valor)`
 - `depositar(double valor)`
 
-### Classe `ContaCorrente`
+### Classe ContaCorrente
 Representa uma conta com cheque especial.
 
 **Responsabilidades:**
 - Permitir saque além do saldo
 - Gerenciar saldo e limite
 
-### Classe `ContaPoupanca`
+### Classe ContaPoupanca
 Representa uma conta com restrições de saque.
 
 **Responsabilidades:**
 - Permitir saque apenas com saldo disponível
 - Definir taxa de rendimento
 
-### Classe `ContaFamilia`
+### Classe ContaFamilia
 Representa uma conta compartilhada.
 
 **Responsabilidades:**
 - Gerenciar saldo conjunto
 - Permitir operações para dois titulares
 
-### Classe `ContaController`
+### Classe ContaController
 Controlador principal do sistema (Facade).
 
 **Responsabilidades:**
@@ -79,24 +79,16 @@ Controlador principal do sistema (Facade).
 - Realizar operações bancárias
 - Controlar criação e identificação das contas
 
-## Tecnologias Utilizadas
-
-- Java
-- Programação Orientada a Objetos (POO)
-- Conceitos aplicados:
-  - Interface
-  - Polimorfismo
-  - Encapsulamento
-- Estruturas de dados:
-  - `HashMap`
-
 ## Conceitos Aplicados
 
+- Programação Orientada a Objetos (POO)
 - Polimorfismo via interface
 - Encapsulamento
 - Coesão e baixo acoplamento
 - Reutilização de código
 - Separação de responsabilidades
+- Estruturas de dados:
+  - `HashMap`
 
 ## Autor
 
